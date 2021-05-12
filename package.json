@@ -20,7 +20,13 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^3.0.0",
     "vue-parallax-js": "^0.2.3",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "cors": "^2.8.5",
+    "express-xml-bodyparser": "^0.3.0",
+    "fs": "^0.0.1-security",
+    "mysql": "^2.18.1",
+    "pg-promise": "^10.10.2"
+
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
