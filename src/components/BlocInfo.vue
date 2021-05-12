@@ -1,17 +1,22 @@
 <template>
-    <div class="flex-grow w-1/6" v-if="info">
-        <router-link to="/DetailsVideo" class="hover:underline">
-            <img :src="info.src" class="w-96 ">
-            <p class="text-left text-sm font-medium"> {{ info.text }} </p>
+    <div class="w-full" v-if="info">
+        <router-link :to="`/DetailsVideo/${info.id}`" class="hover:underline">
+            <img :src="info.miniature" class="w-60 rounded">
+            <p id ="textvideo" class="text-left text-black text-base w-auto max-w-min font-medium mt-2"> {{ info.title }} </p>
         </router-link>
     </div>
 </template>
 
 <script>
 export default {
-  
-  props: {
-      info: Object
-  }
+    props: {
+        info: Object
+    }
 }
 </script>
+
+<style>
+    #textvideo {
+        min-width: fit-content;
+    }
+</style>

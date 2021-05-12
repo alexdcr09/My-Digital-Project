@@ -1,28 +1,29 @@
 <template>
+    <div class="">
         <Header/>
             <main class="font-body">
                 <div class="flex m-auto md:mt-0 mt-5 h-full md:h-screen justify-center">
                     <div class="sm:w-4/5 m-auto flex flex-wrap justify-center">
                         <h1 class="text-5xl text-blue font-bold uppercase md:text-6xl">
-                           Dessins animés
+                            MUSIQUE
                         </h1>
                         <h3 class="md:text-xl text-lg text-dark-900 font-medium md:font-bold mt-4 w-11/12 md:w-10/12">
-                            Découvre des dessins animés à voir en illimité !
-                            Alors installe toi confortablement et profite de la sélection que nous avons a fait pour toi !
+                            Soyez les premiers à soutenir notre projet et à proposer le meilleur contenu vidéo pour nos enfants !
                         </h3>
                     </div>
                     <div class="w-4/5 justify-center mx-auto 2xl:flex xl:flex lg:flex hidden">
-                        <Illustration :isAnime="true" :isActivity="false" :isMusic="false"/>
+                        <Illustration :isAnime="false" :isActivity="false" :isMusic="true"/>
                     </div>
                 </div>
                 <div>
-                    <div v-if="videosPeppaPig.length > 0 && videosHistoiresAnimes.length > 0">
-                        <BlocVideos :categorie="videosPeppaPig"/>
-                        <BlocVideos :categorie="videosHistoiresAnimes"/>
+                    <div v-if="videosComptines.length > 0 && videosChansons.length > 0">
+                        <BlocVideos :categorie="videosComptines"/>
+                        <BlocVideos :categorie="videosChansons"/>
                     </div>
                 </div>
             </main>
         <Footer/>
+    </div>
 </template>
 
 <script>
@@ -35,7 +36,7 @@ import axios from 'axios'
 // @ is an alias to /src
 
 export default {
-    name: 'Dessins_animes',
+    name: 'Home',
     components: {
         Header,
         BlocVideos,
@@ -44,28 +45,28 @@ export default {
     },
     data() {
         return {
-            videosPeppaPig: [],
-            videosHistoiresAnimes: [],
+            videosComptines: [],
+            videosChansons: [],
         }   
     },
     mounted() {
-        this.fetchVideosPeppaPig();
-        this.fetchVideosHistoiresAnimes();
+        this.fetchVideosComptines();
+        this.fetchVideosChansons();
     },
     methods: {
-        fetchVideosPeppaPig() {
+        fetchVideosComptines() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/1')
+                .get('http://localhost:3000/videos/sous_categories/5')
                 .then(response => {
-                    this.videosPeppaPig = response.data
+                    this.videosComptines = response.data
+                    console.log(response)
                 })
         },
-        fetchVideosHistoiresAnimes() {
+        fetchVideosChansons() {
             axios
-                .get('http://localhost:3000/videos/sous_categories/7')
+                .get('http://localhost:3000/videos/sous_categories/6')
                 .then(response => {
-                    this.videosHistoiresAnimes = response.data
-                    console.log(response)
+                    this.videosChansons = response.data
                 })
         },
   }
