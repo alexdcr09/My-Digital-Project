@@ -6,12 +6,18 @@ const app = express();
 app.use(cors())
 
 const port = process.env.PORT || 3000;
+const path = __dirname + '../../dist/';
+app.use(express.static(path));
 
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
 
 const readVideo = () => JSON.parse(fs.readFileSync("./video.json").toString()).map(video => ({
   ...video,}));
+
+app.get("/", (req, res) => {
+  res.sendFile(path + "index.html")
+})
 
 // simple route
 app.get("/video", (req, res) => {

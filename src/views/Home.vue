@@ -48,13 +48,11 @@ export default {
         this.fetchVideosMusique();
     },
     methods: {
-        fetchVideosAnimes() {
-            axios
+        async fetchVideosAnimes() {
+            const response = await axios
                 .get('/videos/categories/1')
-                .then(response => {
                     this.videosAnimes = response.data
                     console.log(response)
-                })
         },
         fetchVideosActivites() {
             axios
