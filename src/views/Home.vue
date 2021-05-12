@@ -62,7 +62,6 @@ export default {
                 .then(response => {
                     this.videosActivites = response.data
                     console.log(response)
-
                 })
         },
         fetchVideosMusique() {
