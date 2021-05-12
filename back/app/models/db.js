@@ -1,5 +1,5 @@
 // const mysql = require("mysql");
-const dbConfig = require("../config/db.config.js");
+// const dbConfig = require("../config/db.config.js");
 const { Client } = require('pg')
 
 const connectionString = process.env.DATABASE_URL;
@@ -21,4 +21,4 @@ connection.connect(error => {
 });
 */
 
-module.exports = connection;
+module.exports = client;
