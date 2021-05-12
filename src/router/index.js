@@ -4,7 +4,6 @@ import DetailsVideo from '../views/DetailsVideo.vue'
 import Dessins_animes from '../views/Dessins_animes.vue'
 import Activites from '../views/Activites.vue'
 import Musique from '../views/Musique.vue'
-import Association from '../views/Association.vue'
 import Qui_sommes_nous from '../views/Qui_sommes_nous.vue'
 import Contact from '../views/Contact'
 
@@ -41,11 +40,6 @@ const routes = [
     path: '/Musique',
     name: 'Musique',
     component: Musique
-  },
-  {
-    path: '/Association',
-    name: 'Association',
-    component: Association
   },
   {
     path: '/Qui_sommes_nous',
