@@ -50,7 +50,7 @@ export default {
     methods: {
         fetchVideosAnimes() {
             axios
-                .get('http://localhost:3000/videos/categories/1')
+                .get('/videos/categories/1')
                 .then(response => {
                     this.videosAnimes = response.data
                     console.log(response)
@@ -58,7 +58,7 @@ export default {
         },
         fetchVideosActivites() {
             axios
-                .get('http://localhost:3000/videos/categories/2')
+                .get('/videos/categories/2')
                 .then(response => {
                     this.videosActivites = response.data
                     console.log(response)
@@ -67,7 +67,7 @@ export default {
         },
         fetchVideosMusique() {
             axios
-                .get('http://localhost:3000/videos/categories/3')
+                .get('/videos/categories/3')
                 .then(response => {
                     this.videosMusique = response.data
                     console.log(response)
