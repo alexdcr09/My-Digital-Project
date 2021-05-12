@@ -29,5 +29,5 @@ app.get("/video/:id", (req, res) => {
 require("./app/routes/video.routes.js")(app);
 // set port, listen for requests
 app.listen(port, function () {
-  console.log("Server is running on port" + port);
+  console.log("Server is running on port " + port);
 });

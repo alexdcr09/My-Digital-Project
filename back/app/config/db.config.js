@@ -1,5 +1,5 @@
 module.exports = {
-    HOST: 'postgres://yrvmtizmzprjob:fc625d41b919cd2c099a0581a59d969d0bc7ce3073af00a94f1e07ac81171b5d@ec2-54-163-254-204.compute-1.amazonaws.com:5432/dc76ng6ooc40t1',
+    HOST: 'postgres://hkzapdwuafmqnn:6003fcc688b793b221d297359e19145afc67f405b79713e385d1c908342be821@ec2-54-74-60-70.eu-west-1.compute.amazonaws.com:5432/ddjldoe8h7lskk',
     USER: 'root',
     PASSWORD: 'root',
     DATABASE: 'MyDigitalProject'
